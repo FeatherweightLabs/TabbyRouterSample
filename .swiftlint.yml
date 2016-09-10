@@ -1,0 +1,11 @@
+included:
+  - On Top
+  - On TopTests
+excluded:
+  - Carthage
+disabled_rules:
+  - function_body_length
+  - force_cast
+  - type_body_length
+  - variable_name
+  - file_length

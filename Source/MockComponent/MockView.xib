@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MockViewController" customModule="OnTop" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="KbJ-By-AdG" id="Tz2-Qv-3N9"/>
+                <outlet property="titleLabel" destination="zHW-TM-URg" id="FOG-JH-8nJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kc6-q4-MHC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-By-AdG">
+                    <color key="backgroundColor" red="0.99987119436264038" green="0.99998223781585693" blue="0.99984109401702881" alpha="0.71121541501976282" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="zjh-bH-zgR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="tintColor" red="0.055214110761880875" green="0.099114060401916504" blue="0.17823290824890137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-TM-URg">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="IzB-AY-i4x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KbJ-By-AdG" firstAttribute="top" secondItem="zHW-TM-URg" secondAttribute="bottom" constant="87" id="Wgr-ot-hiq"/>
+                <constraint firstItem="zHW-TM-URg" firstAttribute="trailing" secondItem="KbJ-By-AdG" secondAttribute="trailing" id="XDV-OY-xvZ"/>
+                <constraint firstItem="KbJ-By-AdG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bUg-jw-ORN"/>
+                <constraint firstItem="zHW-TM-URg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="fx8-JQ-L2Z"/>
+                <constraint firstItem="zHW-TM-URg" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="oRF-3z-sfc"/>
+                <constraint firstItem="zHW-TM-URg" firstAttribute="leading" secondItem="KbJ-By-AdG" secondAttribute="leading" id="sTa-f3-gDE"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
