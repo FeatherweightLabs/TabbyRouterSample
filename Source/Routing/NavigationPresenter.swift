@@ -1,7 +1,12 @@
 import UIKit
 import FeatherweightRouter
 
-func navigationPresenter(store: AppStore) -> UIPresenter {
+struct TabItem {
+    let title: String
+    let image: UIImage?
+}
+
+func navigationPresenter(tabItem tabItem: TabItem, store: AppStore) -> UIPresenter {
 
     let blankView = UIViewController()
     blankView.view.backgroundColor = UIColor.darkGrayColor()
@@ -11,6 +16,8 @@ func navigationPresenter(store: AppStore) -> UIPresenter {
     var routeHistory = [String: RouteEndpoint]()
 
     let navigationController = RoutingNavigationController(rootViewController: blankView)
+    navigationController.tabBarItem.title = tabItem.title
+    navigationController.tabBarItem.image = tabItem.image
 
     navigationController.didShowViewController = { viewController in
         guard let route = routeHistory["\(viewController)"] else { return }

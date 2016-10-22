@@ -26,8 +26,8 @@ func tabBarRouter(initialRoutes: [RouteEndpoint] = [], children: [UIStoreRouter]
     return junctionRouter(tabBarPresenter(initialRoutes), children: children)
 }
 
-func navigationRouter(children: [UIStoreRouter]) -> UIStoreRouter {
-    return stackRouter(navigationPresenter, children: children)
+func navigationRouter(tabItem tabItem: TabItem, children: [UIStoreRouter]) -> UIStoreRouter {
+    return stackRouter({ navigationPresenter(tabItem: tabItem, store: $0) }, children: children)
 }
 
 // MARK: - (RouteEndpoint, UIStorePresenter, [UIStoreRouter]) -> UIStoreRouter

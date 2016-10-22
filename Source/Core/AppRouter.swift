@@ -19,16 +19,20 @@ func appRouter() -> UIStoreRouter {
 
             route(endpoint: .tab1, presenter: tab1),
 
-            navigationRouter([
-                route(endpoint: .tab2, presenter: tab2),
+            navigationRouter(
+                tabItem: TabItem(title: "TAB 2", image: UIImage(named: "tab-icon-placeholder")),
+                children:[
+                    route(endpoint: .tab2, presenter: tab2),
                 ]),
 
-            navigationRouter([
-                route(endpoint: .tab3, presenter: tab3, children: [
-                    route(endpoint: .tab3a, presenter: tab3a),
-                    route(endpoint: .tab3b, presenter: tab3b),
-                    route(endpoint: .tab3c, presenter: tab3c),
-                    ]),
+            navigationRouter(
+                tabItem: TabItem(title: "TAB 3", image: UIImage(named: "tab-icon-placeholder")),
+                children:[
+                    route(endpoint: .tab3, presenter: tab3, children: [
+                        route(endpoint: .tab3a, presenter: tab3a),
+                        route(endpoint: .tab3b, presenter: tab3b),
+                        route(endpoint: .tab3c, presenter: tab3c),
+                        ]),
                 ]),
             ]),
         ])
